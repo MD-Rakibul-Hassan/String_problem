@@ -22,3 +22,18 @@ function isString_2 (string) {
 isString_2("I love my self");
 isString_2(20);
 
+// 2. Write a JavaScript function to check whether a string is blank or not.
+function isBlank (string)  {
+    if(Object.prototype.toString.call(string) === "[object String]") {
+        if(string.length) {
+            console.log(`You have enter ${string}`)
+        }else {
+            console.log("The string is blank please enter a meaningful string")
+        }
+    }else {
+        console.log("Please enter a string....")
+    }
+}
+isBlank("");
+isBlank(10)
+isBlank("My name is Rakibul Hassan");
