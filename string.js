@@ -37,3 +37,35 @@ function isBlank (string)  {
 isBlank("");
 isBlank(10)
 isBlank("My name is Rakibul Hassan");
+
+// 3. Write a JavaScript function to split a string and convert it into an array of words.
+function convertToArray (string) {
+    console.log(string.split(" "))
+}
+convertToArray("Rakibul Hassan");
+
+// 4. Write a JavaScript function to extract a specified number of characters from a string.
+function extractCharacters (string,number) {
+    console.log(string.slice(0,number))
+}
+extractCharacters("Rakibul Hassan Shehab",7)
+
+// 5. Write a JavaScript function to convert a string into abbreviated form.
+function abbreviatedName (name) {
+    if (name.includes(" ")) {
+        let abbreviated = name.split(" ")
+        console.log(abbreviated)
+        let firstIndex;
+        let firstLetter;
+        for (let i = 0; i < abbreviated.length; i++) {
+            firstIndex = abbreviated[0];
+            firstLetter = abbreviated[1].slice(0,1)
+        }
+        let abbreviated_Name = `${firstIndex} ${firstLetter}.`;
+        console.log(abbreviated_Name)
+    }else {
+        console.log("Please enter two name linke " +"Jhon doe")
+    }
+}
+abbreviatedName("Jhon doe")
+
