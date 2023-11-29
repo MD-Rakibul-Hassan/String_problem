@@ -69,3 +69,41 @@ function abbreviatedName (name) {
 }
 abbreviatedName("Jhon doe")
 
+// 6. Write a JavaScript function that hides email addresses to prevent unauthorized access.
+
+function protect_email (email) {
+    const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (email.match(validEmail)) {
+        let splitEmail = email.split("@");
+        let firstPartOfEmail = splitEmail[0].slice(0,splitEmail[0].length / 2);
+        let secondPartOfEmail = splitEmail[1];
+        let protectedEmail = firstPartOfEmail.concat("...@",secondPartOfEmail);
+        console.log(protectedEmail)
+    }else {
+        console.log("Enter a valid email")
+    }
+}
+
+protect_email("mdrakibulhassan2425@gmail.com");
+
+// 7. Write a JavaScript function to parameterize a string.
+function string_parameterize (parametr) {
+    const parameterize = parametr.toLowerCase().replace(/ /g, "-");
+    console.log(parameterize)
+}
+string_parameterize("My name is rakibul hassan shehab");
+
+// Write a JavaScript function to capitalize the first letter of a string.
+
+function capitalize (name) {
+    if (name) {
+        let capitalLetter =  name.split("");
+        let firstLetter = capitalLetter[0].toUpperCase();
+        capitalLetter[0] = firstLetter;
+       let firstCaptalLetter = capitalLetter.join("");
+       console.log(firstCaptalLetter)
+    }else {
+        console.log("Please enter a valid string")
+    }
+}
+capitalize ("shehab")
